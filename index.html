@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pondok Zaenuddin</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">
+        <a href="#home">Pondok Zaenuddin</a>
+      </div>
+      <!-- Tombol Hamburger -->
+      <div class="menu-icon" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    <ul>
+      <li><a href="#home">Beranda</a></li>
+      <li><a href="#ppdb">PPDB</a></li>
+      <li><a href="#program">Program</a></li>
+      <li><a href="#beasiswa">Beasiswa</a></li>
+      <li><a href="https://www.perpusnas.go.id/">Perpustakaan</a></li>
+    </ul>
+  </div>
+  </nav>
+  <!-- Script untuk Navbar Responsif -->
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function(){
+      document.querySelector('nav ul').classList.toggle('active');
+    });
+    
+    // Script untuk animasi scroll (tetap sama seperti kode di atas)
+    document.addEventListener("DOMContentLoaded", function() {
+      const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+      function checkScroll() {
+        const windowHeight = window.innerHeight;
+        const scrollTop = window.scrollY;
+        elementsToAnimate.forEach((element) => {
+          const elementTop = element.getBoundingClientRect().top + scrollTop;
+          const elementHeight = element.offsetHeight;
+          if (scrollTop + windowHeight > elementTop + elementHeight / 4) {
+            element.classList.add('slide-in-right');
+          }
+        });
+      }
+      window.addEventListener("scroll", checkScroll);
+      checkScroll();
+    });
+  </script>
+
+ <!-- Hero Section -->
+  <header id="home">
+     <div class="slideshow-container">
+      <div class="slide"><img src="h.jpg" alt="Gambar 1"></div>
+      <div class="slide"><img src="a.jpg" alt="Gambar 2"></div>
+      <div class="slide"><img src="8.jpg" alt="Gambar 3"></div>
+    <div class="content">
+      <h1>Pondok Pesantren ALQur'an Zaenuddin</h1>
+      <p>Terwujudnya Generasi Qur'ani Di Seluruh Plosok Negri</p>
+      <a href="#ppdb" class="btn">Daftar Sekarang</a>
+    </div>
+  </header>
+  <script>
+    let slideIndex = 0;
+    function showSlides() {
+      let slides = document.querySelectorAll(".slide");
+      slides.forEach(slide => slide.style.opacity = "0");
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].style.opacity = "1";
+      setTimeout(showSlides, 3000);
+    }
+    document.addEventListener("DOMContentLoaded", showSlides);
+  </script>
+
+  <!-- Profil Pengasuh -->
+  <section id="pengasuh"> 
+    <h2 style="background-color: #abc4ff;">Profil Pengasuh</h2>
+    <div class="profile">
+      <img src="s.jpg" alt="Foto Pengasuh" />
+      <h3>K.H. Lukman Al hakim AL-Hafidz</h3>
+      <p align="center">
+       Pengasuh pondok ini sangat sabar dan penuh perhatian, selalu mendengarkan dan memberikan arahan yang bijaksana kepada para santri. Dengan sikap yang tegas namun penyayang, pengasuh ini berhasil membimbing santri untuk disiplin dan berakhlak mulia. Pengasuh pondok yang berpengalaman ini memiliki pengetahuan luas dan senantiasa siap membantu dalam urusan akademik maupun spiritual. Kepribadian yang hangat dan ramah dari pengasuh pondok ini membuat santri merasa nyaman dan diterima. Pengasuh pondok ini adalah teladan yang baik, menunjukkan contoh nyata dalam hal kejujuran, kerja keras, dan kebaikan hati.
+      </p>
+    </div>
+  </section>
+
+  <!-- Kepala Sekolah SMK dan SMP -->
+   
+  <section id="kepala-sekolah">
+    <h2 style="background-color: #abc4ff;">Kepala Sekolah </h2>
+    <div class="flex">
+      <!-- Kepala Sekolah SMK -->
+      <div class="card">
+        <img src="m.jpg" alt="Kepala Sekolah SMK" />
+        <h3>Kepala Sekolah SMK</h3>
+        <h4>Imam Marzuki, S.Pd.</h4>
+        <p>
+          Beliau memiliki pengalaman pendidikan yang mendalam dan komitmen tinggi untuk mengembangkan potensi siswa di SMK melalui inovasi dan pembelajaran berbasis industri.
+        </p>
+      </div>
+      <!-- Kepala Sekolah SMP -->
+      <div class="card">
+        <img src="z.jpg" alt="Kepala Sekolah SMP" />
+        <h3>Kepala Sekolah SMP</h3>
+        <h4>Suherman, S.Pdi.</h4>
+        <p>
+          Dengan pendekatan kepemimpinan yang inspiratif, beliau menciptakan lingkungan belajar yang kondusif dan mendukung perkembangan karakter serta akademik siswa.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pendidikan yang Ditawarkan -->
+   
+  <section id="pendidikan" class="animate-on-scroll">
+    <h2 style="background-color: #abc4ff;">Pendidikan yang Ditawarkan</h2>
+    <div class="list-section">
+      <ol>
+        <li>Tahfidz</li>
+        <ul>
+          <li>Smart Tahfidz (3 Tahun 30 Juz)</li>
+          <li>Reguler (1 Tahun 5 Juz)</li>
+       </ul>
+        <li>Pendidikan SMP</li>
+          <ul>
+            <li>Unggulan</li>
+            <li>Reguler</li>
+          </ul>
+        <li>Pendidikan SMK</li>
+      </ol>
+          <ul>
+            <li>Pengembang Perangkat Lunak & Gim (PPLG)
+            </li>
+            <ul>
+              <h3>Keunggulan Lulusan PPLG</h3>
+              <ol>
+                <li>Programer</li>
+                <li>DataBase Engineer</li>
+                <li>Web Developer</li>
+                <li>Web Engineer</li>
+              </ol>
+            </ul>  
+            <li>Desain Komunikasi Visual (DKV)</li>
+             <ul>
+              <h3>Keunggulan Lulusan DKV</h3>
+              <ol>
+                <li>Graphic Designer</li>
+                <li>Conten Creator</li>
+                <li>Potografer</li>
+                <li>Vidiografer</li>
+                <li>Animator</li>
+              </ol>
+            </ul>  
+          </ul>
+      </ul>
+    </div>
+    
+
+  </section>
+<!-- profil youtb -->
+  <section id="profil ponpes zaenuddin">
+    <h2 style="background-color: #abc4ff;">Profil</h2>
+      <div class="flex">
+      
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/STXILdgeWkE?si=NezACL-vZIXHIm3f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/UZyOPBDq0Ys?si=_yxz61XtPD8MzbAJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+       </script>    
+  </section>
+
+  <!-- Fasilitas -->   
+  <section id="fasilitas" class="animate-on-scroll">
+    <h2 style="background-color: #abc4ff;">Fasilitas</h2>
+    <div class="list-section">
+      <ul>
+        <li>Masjid dengan kapasitas 1000 jama'ah</li>
+        <li>Asrama putra dan putri (65 kamar)</li>
+        <li>Aula/ruang pertemuan </li>
+        <li>70 kamar mandi</li>
+        <li>Ruang kelas modern dengan teknologi pendukung</li>
+        <li>Laboratorium dan workshop yang lengkap</li>
+        <li>Perpustakaan dan ruang belajar bersama</li>
+        <li>Area olahraga dan rekreasi</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Persyaratan -->
+   
+  <section id="persyaratan" class="animate-on-scroll">
+    <h2 style="background-color: #abc4ff;">Persyaratan</h2>
+    <div class="list-section">
+      <ul>
+        <li>Fotocopy KK</li>
+        <li>Fotocopy Akte Keluarga</li>
+        <li>Fotocopy KTP Orang Tua</li>
+        <li>Pas Foto 3x4 (2 lembar)</li>
+        <li>Fotocopy Nilai Rapot (Semester 1 kelas VI atau Kelas IX)</li>
+      </ul>
+    </div>
+    <center>
+  </section>
+
+  <!-- PPDB Section -->
+  <section id="ppdb" class="animate-on-scroll">
+    <div class="flex">
+      <div class="card offer-card">
+    <h2>Penerimaan Peserta Didik Baru (PPDB)</h2>
+    <p>
+      Bergabunglah bersama kami dan wujudkan potensi terbaik Anda. Pondok Pesantren Al-Qur'an Zaenuddin menyediakan pendidikan berkualitas dengan program unggulan yang mengintegrasikan aspek akademik dan karakter. Segera daftarkan diri Anda untuk meraih masa depan yang gemilang!
+    </p>
+  <h4>Gelombang I</h4>
+        <p>Tanggal 26 September 2024 - 31 Januari 2025</p>    
+  <h4>Gelombang II</h4>
+    <p>Tanggal 1 Februari 2025 - 30 Mei 2025</p>
+    <a href="https://bit.ly/PSB-Al-QuranZaenuddin" class="btn">Daftar Sekarang</a>
+  </div>
+
+      <!-- Program Pendidikan -->
+     
+  </section>
+   <section id="program" class="animate-on-scroll">
+    <h2 style="background-color: #abc4ff;">Program Pendidikan</h2>
+     <div class="flex">
+      <div class="list-section">
+        <ul>
+        <li>Tahfidzul Qur’an (Smart Tahfidz 30 bulan khatam 30 juz, Reguler)</li>
+        <li>SMP Unggulan dan Reguler</li>
+
+        <li>SMK dengan jurusan Pengembangan Perangkat Lunak dan GIM serta Design Komunikasi Visual</li>
+      </ul>
+  </div>
+  </section>
+
+  <!-- Beasiswa -->
+  
+  <section id="beasiswa" class="animate-on-scroll">
+    <h2 style="background-color: #abc4ff;">Program Beasiswa</h2>
+    <div class="flex">
+      <div class="card offer-card">
+        <p>
+      Beasiswa Berprestasi(Tahfidz, MTQ, OSN, Mapsi) 
+      <br>
+      Beasiswa Smart Tahfidz
+      <br>
+      Beasiswa Luar Negri (S&K Berlaku)
+    </p>
+      </div>
+  </section>
+<!-- prestasi -->
+   <section id="prestasi">
+    <h2 style="background-color: #abc4ff;">Prestasi</h2>
+ <div class="flex">
+      <div class="card offer-card">
+        <img src="k.JPG" alt="Program Akademik" />
+        <img src="q.JPG" alt="Program Akademik" />
+        <h5>Akademik</h3>
+      </div>
+  <div class="card offer-card">
+        <img src="f.png" alt="Kegiatan Ekstrakurikuler" />
+        <img src="y.JPG" alt="Kegiatan Ekstrakurikuler" />
+        <h5>Santri</h5>
+  </div>
+
+  <!-- Penawaran Sekolah -->
+    
+  <section id="penawaran">
+    <h2 style="background-color: #abc4ff;">Penawaran Sekolah</h2>
+    <p style="text-align: center; max-width:800px; margin: auto 0 40px;">
+      Kami menyediakan pendidikan berkualitas dengan program-program unggulan yang mengintegrasikan aspek akademik dan karakter, sehingga dapat mempersiapkan siswa menghadapi tantangan masa depan.
+    </p>
+    <div class="flex">
+      <div class="card offer-card">
+        <img src="1.png" alt="Program Akademik" />
+        <h3>Program Akademik Unggulan</h3>
+        <p>
+          Kurikulum modern dan inovatif untuk mendukung perkembangan ilmu pengetahuan dan keterampilan praktis siswa.
+        </p>
+      </div>
+      <div class="card offer-card">
+        <img src="b.png" alt="Kegiatan Ekstrakurikuler" />
+        <h3>Kegiatan Ekstrakurikuler</h3>
+        <p>
+          Beragam kegiatan yang dirancang untuk mengasah bakat dan minat siswa serta membangun karakter melalui pengalaman nyata.
+        </p>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="https://bit.ly/PSB-Al-QuranZaenuddin" class="btn">Daftar Sekarang</a>
+    </div>
+  </section>
+
+  <!-- Galeri Kegiatan -->
+  <section id="gallery">
+   <h2 >kegiatan kami</h2>
+    <div class="gallery">
+      <img src="v.JPG" alt="Kegiatan 1" />
+      <img src="5.png" alt="Kegiatan 2" />
+      <img src="8.JPG" alt="Kegiatan 3" />
+    </div>
+    <br>
+    <br>
+    <h4 align="lift">Medsos kami</h4>
+    <br>
+    <p align="lift"><a href="https://youtube.com/@ponpesalza6717?si=CmNUXWoCl-poeovq" target="_blank">
+        <img src="g.png" alt="youtube Icon" width="30" height="30" class="social-icon">PonPes ALZA</a></p>
+    <p align="lift"><a href="https://www.facebook.com/ponpesalquranzaenuddin/tps://" target="_blank">
+        <img src="t.jpg" alt="facebook Icon" width="30" height="30" class="social-icon">Ponpes Zaenuddin</a></p>
+        <p align="lift"><a href="https://www.instagram.com/ponpes_alquranzaenuddin?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+        <img src="6.jpg" alt="instagram Icon" width="30" height="30" class="social-icon">ponpes_alquranzaenuddin</a></p>
+    <br>
+    <br> 
+      <h3 align="center">lokasi</h3>
+      <p align="center">JL.Raya Pantura Tegal-Pemalang KM 09 Maribaya Kramat-Tegal.</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.95462244986!2d109.21305144026002!3d-6.867229113658421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fc7b56204ec6d%3A0xfbfa4455c30df7ab!2sSMK%20Al-Qur&#39;an%20Zaenuddin!5e0!3m2!1sid!2sid!4v1740449153365!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<script src="script.js"></script>
+  <!-- Footer -->
+ <footer>
+    <p>&copy; 2025 Amelia Shintia</p>
+  </footer>
+</body>
+</html>
